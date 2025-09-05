@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Currency Converter</h1>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <input id="amount" type="number" placeholder="Monto" />
+        <select id="from-currency">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="COP">COP</option>
+        </select>
+        <select id="to-currency">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="COP">COP</option>
+        </select>
+        <button id="convert">Convertir</button>
+        <div id="result"></div>
+      </div>
+
+      <button id="settings-btn">⚙️ Configurar Tasas</button>
+    </main>
+
+    <div id="settings-modal" class="modal">
+      <div class="modal-content">
+        <h2>Configurar Tasas</h2>
+        <label for="usd-cop">USD a COP</label>
+        <input type="number" id="usd-cop" value="4000" />
+        <label for="eur-cop">EUR a COP</label>
+        <input type="number" id="eur-cop" value="4500" />
+        <label for="usd-eur">USD a EUR</label>
+        <input type="number" id="usd-eur" value="0.9" />
+        <button id="save-settings">Guardar Tasas</button>
+        <button id="close-modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="bundle.js"></script>
+</body>
+</html>
