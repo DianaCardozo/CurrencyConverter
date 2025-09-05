@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Tasas predeterminadas
   let rates = {
     USD: { EUR: 0.9, COP: 4000 },
     EUR: { USD: 1.1, COP: 4500 },
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModalButton = document.getElementById('close-modal');
   const saveSettingsButton = document.getElementById('save-settings');
 
-  // Lógica de conversión de divisas
   convertButton.addEventListener('click', () => {
     const amount = parseFloat(amountInput.value);
     const fromCurrency = fromCurrencySelect.value;
@@ -42,17 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Mostrar modal de configuración
   settingsButton.addEventListener('click', () => {
     settingsModal.style.display = 'block';
   });
 
-  // Cerrar el modal
   closeModalButton.addEventListener('click', () => {
     settingsModal.style.display = 'none';
   });
 
-  // Guardar tasas de configuración
   saveSettingsButton.addEventListener('click', () => {
     rates.USD.COP = parseFloat(document.getElementById('usd-cop').value);
     rates.EUR.COP = parseFloat(document.getElementById('eur-cop').value);
