@@ -1,11 +1,9 @@
-// Colores principales
 $bg-dark: #2b2b2b;
 $bg-light: #383838;
 $text-light: #f5f5f5;
 $text-dark: #333;
 $highlight-color: #00bcd4; // Azul brillante para los botones y enlaces
 
-// Configuración global
 * {
   margin: 0;
   padding: 0;
@@ -102,7 +100,6 @@ button:hover {
   background-color: #555;
 }
 
-// Modal de configuración
 #settings-modal {
   position: fixed;
   top: 0;
